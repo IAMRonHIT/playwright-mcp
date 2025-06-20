@@ -94,6 +94,7 @@ class BrowserServer {
     const { browser, error } = await browserType.launchPersistentContext(request.userDataDir, {
       ...request.launchOptions,
       ...request.contextOptions,
+      headless: false,
       handleSIGINT: false,
       handleSIGTERM: false,
     }).then(context => {
